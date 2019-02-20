@@ -54,12 +54,14 @@
 // rocksWarning('Pacific Ave and East Main St');
 // rocksWarning('1st and Broadway');
 
-function remove(el){
+function removeNegatives(el){
   return (el[0] >= 0 && el[1] >= 0);
 }
 
-function removeNegative(value) {
-  return value >= 0;
+function combine(el){
+  let combined = []
+  combined.push(el[0] + el[1]);
+  return combined;
 }
 
 let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
@@ -68,5 +70,7 @@ let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 //   return (el[0] >= 0 && el[1] >= 0);
 // });
 
-let turtleFilter = turtleMovements.filter(remove);
-console.log(turtleFilter);
+let turtleFiltered = turtleMovements.filter(removeNegatives);
+let turtleMapped = turtleFiltered.map(combine);
+console.log(turtleFiltered);
+console.log(turtleMapped);
