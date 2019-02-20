@@ -76,4 +76,18 @@
 // console.log(turtleMapped);
 
 let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'.split(' ');
-console.log(input);
+//console.log(input);
+
+let derp = input.reduce((accumulater, currentValue) => {
+  return currentValue.length === 3 ? accumulater + ' ' : accumulater + currentValue.substring(currentValue.length - 1, currentValue.length).toLocaleUpperCase();
+}, '');
+
+// let derp = input.reduce((accumulater, currentValue) => {
+//   if(currentValue.length === 3){
+//     return accumulater + ' ';
+//   } else {
+//     return accumulater + currentValue.substring(currentValue.length - 1, currentValue.length).toLocaleUpperCase();
+//   }
+// }, '');
+
+console.log(derp);
