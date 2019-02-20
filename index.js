@@ -54,23 +54,26 @@
 // rocksWarning('Pacific Ave and East Main St');
 // rocksWarning('1st and Broadway');
 
-function removeNegatives(el){
-  return (el[0] >= 0 && el[1] >= 0);
-}
+// function removeNegatives(el){
+//   return (el[0] >= 0 && el[1] >= 0);
+// }
 
-function combine(el){
-  let combined = []
-  combined.push(el[0] + el[1]);
-  return combined;
-}
+// function combine(el){
+//   let combined = []
+//   combined.push(el[0] + el[1]);
+//   return combined;
+// }
 
-let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+// let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 //removeNegatives(turtleMovements);
 // let turtleFilter = turtleMovements.filter(function (el) {
 //   return (el[0] >= 0 && el[1] >= 0);
 // });
 
-let turtleFiltered = turtleMovements.filter(removeNegatives);
-let turtleMapped = turtleFiltered.map(combine);
-console.log(turtleFiltered);
-console.log(turtleMapped);
+// let turtleFiltered = turtleMovements.filter(removeNegatives);
+// let turtleMapped = turtleFiltered.map(combine);
+// console.log(turtleFiltered);
+// console.log(turtleMapped);
+
+let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'.split(' ');
+console.log(input);
