@@ -36,20 +36,45 @@
 // console.log(filteredNames) // => ['Rich', 'Ray']
 // // <---- DO NOT EDIT BETWEEN THESE LINES
 
-function hazardWarningCreator(typeOfWarning){
-  let counter = 0;
-  return function(location){
-    counter++;
-    let warningMessage = `DANGER! There is a ${typeOfWarning} hazard at ${location}!`;
-    let warningCounter = `The ${typeOfWarning} hazard alert has triggered ${counter} time(s) today!`;
-    console.log(warningMessage);
-    console.log(warningCounter);
-    //return `${warningMessage} ${warningCounter}`;
-  };
+// function hazardWarningCreator(typeOfWarning){
+//   let counter = 0;
+//   return function(location){
+//     counter++;
+//     let warningMessage = `DANGER! There is a ${typeOfWarning} hazard at ${location}!`;
+//     let warningCounter = `The ${typeOfWarning} hazard alert has triggered ${counter} time(s) today!`;
+//     console.log(warningMessage);
+//     console.log(warningCounter);
+//     //return `${warningMessage} ${warningCounter}`;
+//   };
+// }
+
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+
+// rocksWarning('Main St and Pacific Ave');
+// rocksWarning('Pacific Ave and East Main St');
+// rocksWarning('1st and Broadway');
+
+function remove(array){
+  for (var i in array) {  
+    for(var j in array[i]) {
+      if(array[i][j] >= 0){
+        // console.log(array[i][0]);
+        // console.log(array[i][1]);
+        console.log(array[i][j]);
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
+function removeNegative(value) {
+  return value >= 0;
+}
 
-rocksWarning('Main St and Pacific Ave');
-rocksWarning('Pacific Ave and East Main St');
-rocksWarning('1st and Broadway');
+let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+//removeNegatives(turtleMovements);
+let turtleFilter = turtleMovements.filter(function (el) {
+  return (el[0] >= 0 && el[1] >= 0);
+});
+console.log(turtleFilter);
