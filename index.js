@@ -91,7 +91,7 @@ let input = 'noggin oreo the moon time tele steed his tent apollo her lives thou
 //console.log(input);
 
 let derp = input.reduce((accumulater, currentValue) => {
-  return currentValue.length === 3 ? accumulater + ' ' : accumulater + currentValue.substring(currentValue.length - 1, currentValue.length).toLocaleUpperCase();
+  return currentValue.length === 3 ? accumulater + ' ' : accumulater + currentValue[currentValue.length - 1].toLocaleUpperCase();
 }, '');
 
 console.log(derp);
