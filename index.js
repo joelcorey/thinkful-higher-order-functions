@@ -37,11 +37,11 @@
 // // <---- DO NOT EDIT BETWEEN THESE LINES
 
 function hazardWarningCreator(typeOfWarning){
-  let warningCounter;
+  let counter = 0;
   return function(location){
-    warningCounter++;
+    counter++;
     let warningMessage = `DANGER! There is a ${typeOfWarning} hazard at ${location}!`;
-    let warningCounter = `The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`;
+    let warningCounter = `The ${typeOfWarning} hazard alert has triggered ${counter} time(s) today!`;
     console.log(warningMessage);
     console.log(warningCounter);
     //return `${warningMessage} ${warningCounter}`;
@@ -51,3 +51,5 @@ function hazardWarningCreator(typeOfWarning){
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
 
 rocksWarning('Main St and Pacific Ave');
+rocksWarning('Pacific Ave and East Main St');
+rocksWarning('1st and Broadway');
